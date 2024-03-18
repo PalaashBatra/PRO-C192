@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petra Royal Temple Quiz</title>
+</head>
+<body>
+
+<h1>Petra Royal Temple Quiz</h1>
+
+<form id="quizForm">
+  
+  <h3>1. What is the architectural style predominantly seen in the construction of the Royal Temple in Petra?</h3>
+  <input type="radio" name="q1" value="a"> a) Greco-Roman<br>
+  <input type="radio" name="q1" value="b"> b) Nabataean<br>
+  <input type="radio" name="q1" value="c"> c) Egyptian<br>
+  <input type="radio" name="q1" value="d"> d) Persian<br>
+  
+  <h3>2. Which ancient civilization built the Royal Temple in Petra, and during which period was it constructed?</h3>
+  <input type="radio" name="q2" value="a"> a) Ancient Greeks - 5th century BCE<br>
+  <input type="radio" name="q2" value="b"> b) Nabataeans - 1st century BCE to 2nd century CE<br>
+  <input type="radio" name="q2" value="c"> c) Egyptians - 3rd millennium BCE<br>
+  <input type="radio" name="q2" value="d"> d) Romans - 1st century CE<br>
+  
+  <h3>3. What purpose did the Royal Temple serve within the ancient city of Petra?</h3>
+  <input type="radio" name="q3" value="a"> a) Residential palace for royalty<br>
+  <input type="radio" name="q3" value="b"> b) Marketplace for trade<br>
+  <input type="radio" name="q3" value="c"> c) Religious sanctuary or shrine<br>
+  <input type="radio" name="q3" value="d"> d) Military fortress<br>
+  
+  <h3>4. How does the Royal Temple's design and layout compare to other religious structures of its time?</h3>
+  <input type="radio" name="q4" value="a"> a) It features a circular layout similar to Greek temples.<br>
+  <input type="radio" name="q4" value="b"> b) Its architecture is characterized by extensive use of arches and domes.<br>
+  <input type="radio" name="q4" value="c"> c) It follows the traditional Egyptian pyramid design.<br>
+  <input type="radio" name="q4" value="d"> d) It incorporates rock-cut elements into its structure.<br>
+  
+  <h3>5. What are some of the key features or elements that distinguish the Royal Temple from other structures in Petra?</h3>
+  <input type="radio" name="q5" value="a"> a) Extensive use of mosaic artwork<br>
+  <input type="radio" name="q5" value="b"> b) Integration of water features like fountains and pools<br>
+  <input type="radio" name="q5" value="c"> c) Carved reliefs depicting mythological scenes<br>
+  <input type="radio" name="q5" value="d"> d) Large central courtyard surrounded by colonnades<br>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<div id="answers"></div>
+
+<script>
+document.getElementById('quizForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var score = 0;
+  var answers = ['b', 'b', 'c', 'd', 'c']; // Correct answers
+  var formData = new FormData(this);
+  for (var pair of formData.entries()) {
+    if (answers.includes(pair[1])) {
+      score++;
+    }
+  }
+  alert("Your score is: " + score + "/5");
+  var result = "Your score is: " + score + "/5";
+  var correctAnswers = "<br><br>Correct Answers:<br>";
+  correctAnswers += "1. b) Nabataean<br>";
+  correctAnswers += "2. b) Nabataeans - 1st century BCE to 2nd century CE<br>";
+  correctAnswers += "3. c) Religious sanctuary or shrine<br>";
+  correctAnswers += "4. d) It incorporates rock-cut elements into its structure.<br>";
+  correctAnswers += "5. c) Carved reliefs depicting mythological scenes<br>";
+  document.getElementById('answers').innerHTML = result + correctAnswers;
+});
+</script>
+
+</body>
+</html>

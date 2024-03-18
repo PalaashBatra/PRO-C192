@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rio de Janeiro Quiz</title>
+</head>
+<body>
+
+<h1>Rio de Janeiro Quiz</h1>
+
+<form id="quizForm">
+  
+  <h3>1. Rio de Janeiro is known as the "Marvelous City" in which language?</h3>
+  <input type="radio" name="q1" value="a"> a) Spanish<br>
+  <input type="radio" name="q1" value="b"> b) Portuguese<br>
+  <input type="radio" name="q1" value="c"> c) French<br>
+  <input type="radio" name="q1" value="d"> d) English<br>
+  
+  <h3>2. What is the name of the famous beach in Rio de Janeiro?</h3>
+  <input type="radio" name="q2" value="a"> a) Ipanema Beach<br>
+  <input type="radio" name="q2" value="b"> b) Bondi Beach<br>
+  <input type="radio" name="q2" value="c"> c) Waikiki Beach<br>
+  <input type="radio" name="q2" value="d"> d) Miami Beach<br>
+  
+  <h3>3. Which iconic statue overlooks Rio de Janeiro from the peak of Corcovado Mountain?</h3>
+  <input type="radio" name="q3" value="a"> a) Statue of Liberty<br>
+  <input type="radio" name="q3" value="b"> b) Christ the Redeemer<br>
+  <input type="radio" name="q3" value="c"> c) Statue of David<br>
+  <input type="radio" name="q3" value="d"> d) Eiffel Tower<br>
+  
+  <h3>4. What is the name of the annual festival that takes place in Rio de Janeiro featuring colorful parades and samba music?</h3>
+  <input type="radio" name="q4" value="a"> a) Mardi Gras<br>
+  <input type="radio" name="q4" value="b"> b) Oktoberfest<br>
+  <input type="radio" name="q4" value="c"> c) Carnival<br>
+  <input type="radio" name="q4" value="d"> d) Diwali<br>
+  
+  <h3>5. What is the name of the mountain that offers breathtaking views of Rio de Janeiro and is accessed by a cable car?</h3>
+  <input type="radio" name="q5" value="a"> a) Mount Everest<br>
+  <input type="radio" name="q5" value="b"> b) Sugarloaf Mountain<br>
+  <input type="radio" name="q5" value="c"> c) Mount Kilimanjaro<br>
+  <input type="radio" name="q5" value="d"> d) Mount Fuji<br>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<div id="answers"></div>
+
+<script>
+document.getElementById('quizForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var score = 0;
+  var answers = ['b', 'a', 'b', 'c', 'b']; // Correct answers
+  var formData = new FormData(this);
+  for (var pair of formData.entries()) {
+    if (answers.includes(pair[1])) {
+      score++;
+    }
+  }
+  alert("Your score is: " + score + "/5");
+  var result = "Your score is: " + score + "/5";
+  var correctAnswers = "<br><br>Correct Answers:<br>";
+  correctAnswers += "1. b) Portuguese<br>";
+  correctAnswers += "2. a) Ipanema Beach<br>";
+  correctAnswers += "3. b) Christ the Redeemer<br>";
+  correctAnswers += "4. c) Carnival<br>";
+  correctAnswers += "5. b) Sugarloaf Mountain<br>";
+  document.getElementById('answers').innerHTML = result + correctAnswers;
+});
+</script>
+
+</body>
+</html>

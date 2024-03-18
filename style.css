@@ -1,0 +1,303 @@
+@font-face {
+    font-family: "Fuzzy Bubbles";
+    src: url("./assets/FuzzyBubbles-Bold.ttf") format("truetype");
+  }
+@font-face {
+    font-family: "Pangolin";
+    src: url("./assets/Pangolin-Regular.ttf") format("truetype");
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+body{
+ background-color: #FFF;
+}
+
+.text-head {
+    font-family:"Fuzzy Bubbles";
+    font-size :110px; 
+    color:#673FD7;
+    text-shadow: 4px 4px 6px #9779e7;
+    position:relative;
+    left: 190px;
+    top: 110px;
+
+}
+
+.img-head{
+    position: absolute;
+    left: 1050px;
+    height: 750px;
+    width: 750px;
+}
+
+
+.p-head{
+    position: absolute;
+    left: 95px;
+    top: 250px;
+    font-family:"Fuzzy Bubbles";
+    font-size :30px; 
+}
+
+
+.btn36pos{
+    position: absolute;
+    left: 75px;
+    top: 450px;
+}
+.btn37pos{
+    position: absolute;
+    left: 375px;
+    top: 450px;
+}
+
+
+/* CSS */
+.button-36 {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 8rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  
+}
+
+.btn36{
+    color:#fff;
+    font-size: 36px;
+}
+
+.button-36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+
+}
+
+.descriptions{
+  height: 3in;
+}
+.des-text{
+  font-family: "Pangolin";
+  font-weight: bolder;
+  color:#673FD7;
+  text-shadow: 4px 4px 6px #9779e7;
+  font-size: 100px;
+  top:20px;
+  left: 20px;
+}
+.des-p{
+  font-size: 30px;
+  font-family: "Fuzzy Bubbles";
+}
+
+.instruction{
+    position: absolute;
+    width: 1850px;
+    height: 1000px;
+    /* background-color: rgb(204 89 09); */
+    top: 1050px;
+}
+
+.instructions-head{
+  font-size: 100px;
+  font-family: "Pangolin";
+  font-weight: bolder;
+  color:#673FD7;
+  text-shadow: 4px 4px 6px #9779e7;
+ 
+  top:20px;
+  left: 20px;
+}
+
+.instructions-steps{
+ 
+  top: 1.5in;
+  left: 20px;
+  font-size: 25px;
+  font-family: "Pangolin";
+  width: 400px;
+}
+
+.int{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.image{
+  top: 500px;
+  height:200px;
+  width:200px;
+  margin-left: 450px;
+}
+
+
+
+
+.travel {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 180px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all .3s;
+  margin-left: 60px;
+  margin-top: 220px;
+ }
+ 
+ .travel:active,
+ .travel:hover {
+  outline: 0;
+ }
+ 
+ .travel span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+ }
+ 
+ .travel:hover span {
+  background: none;
+ }
+ 
+ .travel:active {
+  transform: scale(0.9);
+ }
+
+ .game {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  margin-top: 10px;
+  margin-left: 140px;
+  width: 150px;
+ }
+ 
+ .game span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .game svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+ }
+ 
+ .game:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+ }
+ 
+ .game:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+ }
+ 
+ .game:hover span {
+  transform: translateX(5em);
+ }
+ 
+ .game:active {
+  transform: scale(0.95);
+ }
+ 
+ @keyframes fly-1 {
+  from {
+   transform: translateY(0.1em);
+  }
+ 
+  to {
+   transform: translateY(-0.1em);
+  }
+ }
+ 
+ 
+ .foot{
+  position: absolute;
+  top: 2150px;
+  background-color: #1c2331;
+  width: 1900px;
+  height: 100px;
+ }
+
+ .foot1{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  position: absolute;
+  background-color: #6351ce;
+  width: 1900px;
+  height: 40px;
+  top:0px;
+  color: white;
+ }
+
+.foot1 a{
+  color: white;
+  font-size: 25px;
+  margin: 2px;
+  margin-right: 8px;
+}
+
+
+.text-foot{
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  margin-top: 50px;
+
+}
+
+.text-foot:hover {
+  text-shadow: 4px 4px 6px #9779e7;
+}

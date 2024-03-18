@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taj Mahal Quiz</title>
+</head>
+<body>
+
+<h1>Taj Mahal Quiz</h1>
+
+<form id="quizForm">
+  
+  <h3>1. In which city is the Taj Mahal located?</h3>
+  <input type="radio" name="q1" value="a"> a) Mumbai<br>
+  <input type="radio" name="q1" value="b"> b) Delhi<br>
+  <input type="radio" name="q1" value="c"> c) Agra<br>
+  <input type="radio" name="q1" value="d"> d) Jaipur<br>
+  
+  <h3>2. Who commissioned the construction of the Taj Mahal?</h3>
+  <input type="radio" name="q2" value="a"> a) Akbar<br>
+  <input type="radio" name="q2" value="b"> b) Shah Jahan<br>
+  <input type="radio" name="q2" value="c"> c) Aurangzeb<br>
+  <input type="radio" name="q2" value="d"> d) Babur<br>
+  
+  <h3>3. When was the construction of the Taj Mahal completed?</h3>
+  <input type="radio" name="q3" value="a"> a) 1500s<br>
+  <input type="radio" name="q3" value="b"> b) 1600s<br>
+  <input type="radio" name="q3" value="c"> c) 1700s<br>
+  <input type="radio" name="q3" value="d"> d) 1800s<br>
+  
+  <h3>4. What material was primarily used in the construction of the Taj Mahal?</h3>
+  <input type="radio" name="q4" value="a"> a) Marble<br>
+  <input type="radio" name="q4" value="b"> b) Sandstone<br>
+  <input type="radio" name="q4" value="c"> c) Granite<br>
+  <input type="radio" name="q4" value="d"> d) Limestone<br>
+  
+  <h3>5. What is the architectural style of the Taj Mahal?</h3>
+  <input type="radio" name="q5" value="a"> a) Gothic<br>
+  <input type="radio" name="q5" value="b"> b) Baroque<br>
+  <input type="radio" name="q5" value="c"> c) Mughal<br>
+  <input type="radio" name="q5" value="d"> d) Renaissance<br>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<div id="answers"></div>
+<script>
+document.getElementById('quizForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var score = 0;
+  var answers = ['c', 'b', 'b', 'a', 'c']; // Correct answers
+  var formData = new FormData(this);
+  for (var pair of formData.entries()) {
+    if (answers.includes(pair[1])) {
+      score++;
+    }
+  }
+  alert("Your score is: " + score + "/5");
+  var result = "Your score is: " + score + "/5";
+  var correctAnswers = "<br><br>Correct Answers:<br>";
+  correctAnswers += "1. c) Agra<br>";
+  correctAnswers += "2. b) Shah Jahan<br>";
+  correctAnswers += "3. b) 1600s<br>";
+  correctAnswers += "4. a) Marble<br>";
+  correctAnswers += "5. c) Mughal<br>";
+  document.getElementById('answers').innerHTML = result + correctAnswers;
+});
+</script>
+
+</body>
+</html>
